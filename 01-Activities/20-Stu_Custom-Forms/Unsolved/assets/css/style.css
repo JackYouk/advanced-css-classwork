@@ -86,13 +86,21 @@ button {
 }
 
 /* What does this CSS rule do? */
+/* CSS for the dropdown */
 select {
+  /* mozilla/firefox browser reset for selects*/
   -moz-appearance: none;
+  /* Chrome browser reset for selects*/
   -webkit-appearance: none;
+  /* safari browser reset for selects */
   appearance: none;
+  /* adds dropdown arrow img */
   background-image: url("../images/arrow.png");
+  /* because img is small, will repeat itself until it fills up the content, no-repeat prevents it from repeating */
   background-repeat: no-repeat;
+  /* sets it to the right side of the element */
   background-position: right;
+  /* sits within the boundaries of the box */
   background-size: contain;
 }
 
@@ -113,11 +121,13 @@ select:hover, button:hover {
 }
 
 /* What does this pseudo-class mean? */
+/* adding 5px to the border on the right after it is clicked/when interacting*/
 .text-input:focus {
   border-right-width: 5px;
 }
 
 /* What does this pseudo-class mean? */
+/* when placeholder showing in the comments/text input, border style is dashed */
 .text-input:placeholder-shown {
   border-style: dashed;
 }
@@ -137,12 +147,14 @@ select:hover, button:hover {
 }
 
 /* What does this selector do? */
+/* when box is checked it changes the color and style */
 .checkbox:checked + label {
   color: #999999;
   font-style: italic;
 }
 
 /* What does this selector do? */
+/* adds pseudo element of "thanks" after the label tag when the box is checked */
 .checkbox:checked + label::after {
   margin-left: 10px;
   font-size: 90%;
